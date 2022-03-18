@@ -12,22 +12,22 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600)) 
 
 # Background image
-bg = pygame.image.load(os.path.join(filepath, "background.png"))
+bg = pygame.image.load(os.path.join(filepath, "images/background.png"))
 
 # Title and Icon
 pygame.display.set_caption("Space Invaders")
-icon = pygame.image.load(os.path.join(filepath, "ufo.png")) # Website for free png images ( for icons needs to be 32 x 32 pixels) https://www.flaticon.com/
+icon = pygame.image.load(os.path.join(filepath, "images/ufo.png")) # Website for free png images ( for icons needs to be 32 x 32 pixels) https://www.flaticon.com/
 pygame.display.set_icon(icon)
 
 # Player
-playerImg = pygame.image.load(os.path.join(filepath, "player.png"))
+playerImg = pygame.image.load(os.path.join(filepath, "images/player.png"))
 playerX = 370
 playerY = 480
 playerX_change = 0
 playerY_change = 0
 
 # Enemy
-enemyImg_large = pygame.image.load(os.path.join(filepath, "enemy.png"))
+enemyImg_large = pygame.image.load(os.path.join(filepath, "images/enemy.png"))
 enemyImg = pygame.transform.scale(enemyImg_large, (48, 48)) # modifying the size of the enemy image
 enemyX = random.randint(0, 736)
 enemyY = random.randint(50, 150)
@@ -38,7 +38,7 @@ enemyY_change = 40
 
 # Ready - you cant see the bullet on the screen
 # Fire - the bullet is currently moving 
-bulletImg = pygame.image.load(os.path.join(filepath, "bullet.png"))
+bulletImg = pygame.image.load(os.path.join(filepath, "images/bullet.png"))
 bulletY = 480
 bulletX = 0
 bulletY_change = 10
